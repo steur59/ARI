@@ -1,0 +1,14 @@
+{% extends 'Forum/base.html' %}
+{% block content %}
+    {% for article in articles %}
+<a href="http://127.0.0.1:8000/Forum/article/{{article.id}}">
+    <div  style=" border : solid ; margin: 5px;">
+        <br/>
+        <h1 >{{article.title}}</h1>
+        <p style="font-style: italic;">Auteur : {{article.author}}</p>
+        <time>Publié le : {{article.date}}</time>
+    </div>
+</a>
+    {% endfor %}
+{% endblock %}
+

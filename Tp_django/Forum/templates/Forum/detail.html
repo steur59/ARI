@@ -1,0 +1,52 @@
+{% extends 'Forum/base.html' %}
+
+{% block content %}
+<!-- ARTICLE -->
+<div >
+    <div style=" border : solid ; margin: 5px;" >
+    <br/>
+    <h1 >{{title}}</h1>
+    <p>{{contents}}</p>
+    <p style="font-style: italic;">Auteur : {{author}}</p>
+    <time>Publié le : {{date}}</time>
+  </div>
+<!-- END ARTICLE -->
+
+<!-- REACTIONS -->
+  <div >
+    <br/>
+    <div>
+      <p style="color: blue;"> Like(s) : {{positif}}</p>
+      <button onclick="window.location.href = '/Forum/article/{{id}}/like';">+1</button>
+    </div>
+    <div>
+      <p style="color: red;"> Disliske(s): {{negatif}}</p>
+      <button onclick="window.location.href = '/Forum/article/{{id}}/dislike';">+1</button>
+    </div>
+  <div>
+  </br>
+    <button onclick="window.location.href = '/Forum/article/{{id}}/commentary';">Commenter</button>
+  </div>
+    
+  </div>
+</div>
+<div style=" border : solid ; margin: 5px;"></div>
+<!-- END REACTIONS -->
+
+<!-- COMMENTAIRES -->
+<div >
+<h1>Commentaires :</h1>
+{% for commentary in commentarys %}
+    <div >
+        <br/>
+        <p>{{commentary.contents}}</p>
+        <p style="font-style: italic;">Auteur : {{commentary.author}}</p>
+        <time>Publié le : {{commentary.date}}</time>
+    </div>
+    <div style=" border : solid ; margin: 5px;" ></div>
+    
+{% endfor %}
+</div>
+<!-- END COMMENTAIRES -->
+{% endblock %}
+

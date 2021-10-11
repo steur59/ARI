@@ -1,0 +1,30 @@
+<body>
+    <!DOCTYPE html>
+    <html lang="fr">
+    <title>Miage Overflow</title>
+    <meta charset="UTF-8">
+
+<body>
+
+<!-- NAVBAR -->
+<div style="background-color: black;  ">
+        <a style="text-decoration: none; color: rgb(255, 255, 255); font-size: 50px;  " href="http://127.0.0.1:8000/Forum">Miage Overflow</a>
+        <a style="text-decoration: none; color: rgb(255, 255, 255); font-size: 30px; border: dashed rgb(255, 255, 255);" href="http://127.0.0.1:8000/Forum/articles">Liste des articles</a>
+        <a style="text-decoration: none; color: rgb(255, 255, 255); font-size: 30px; border: dashed rgb(255, 255, 255);" href="http://127.0.0.1:8000/Forum/article/new">Publier un article</a>
+        <a style="text-decoration: none; color: rgb(255, 255, 255); font-size: 30px; border: dashed rgb(255, 255, 255);" href="http://127.0.0.1:8000/admin">Panneau d'administration</a>
+</div>
+<!-- END NAVBAR -->
+<br/>
+<!-- MAIN -->
+<div  >
+    {% block content %}
+    <div  id=content>
+        <!-- CONTENT -->
+    </div>
+    {% endblock %}
+<!-- END MAIN -->
+</div>
+</body>
+</html>
+
+
